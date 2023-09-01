@@ -6,6 +6,7 @@
 from __future__ import print_function
 
 from setuptools import Command
+from setuptools.command.install import install
 from setuptools._distutils import errors
 from setuptools._distutils import log
 import os
