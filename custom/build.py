@@ -156,7 +156,8 @@ class BuildDocumentation(Command):
         log.info('Compiling manpage documentation for language {}'.format(lang))
         cmd = 'rst2man'
         if sys.platform == 'win32':
-            cmd = os.path.join(sys.prefix, 'Scripts', cmd + '.exe')
+#            cmd = os.path.join(sys.prefix, 'Scripts', cmd + '.exe')
+            cmd = os.path.join(sys.prefix, 'Scripts', cmd)
         self.compile_docs(self.source_dir(lang),
                           os.path.join(self.dest_dir('man', lang), 'man1'), cmd, '.1')
 
