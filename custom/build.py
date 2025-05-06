@@ -164,7 +164,7 @@ class BuildDocumentation(Command):
         log.info('Compiling HTML documentation for language {}'.format(lang))
         cmd = 'rst2html'
         if sys.platform == 'win32':
-            cmd = os.path.join(sys.prefix, 'Scripts', cmd + '.py')
+            cmd = os.path.join(sys.prefix, 'Scripts', cmd + '.exe')
         self.compile_docs(self.source_dir(lang),
                           self.dest_dir('html', lang), cmd, '.html')
 
